@@ -1,5 +1,7 @@
 public class Converter {
-void convert();
+void convert(){
+
+}
 
 }
 //  *0.75
