@@ -16,6 +16,10 @@ public class main {
                 String mountStep = scanner.next();
                 System.out.println("Введите день за который хотите ввести коллличество щагов");
                 Integer daytStep = scanner.nextInt();
+                if (daytStep >30) {
+                    System.out.println("нет такого дня в месяце");
+                    continue;
+                }
                 System.out.println("Ввесдите колличество шагов пройденных в этот день");
                 Integer stepsThatDay = scanner.nextInt();
                 stepTracker.insertStep(mountStep, daytStep, stepsThatDay);

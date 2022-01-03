@@ -4,6 +4,7 @@ import java.util.HashMap;
 public class StepTracker {
     static HashMap<String, HashMap<Integer,Integer>> resultStep;
     int targetStep ;
+    Converter converter = new Converter();
     void createClass() {
 
 
@@ -67,8 +68,10 @@ public class StepTracker {
                         }
                     }
                 }
-       System.out.println( "\n" +"всего шагов за месяц "+sumStep);
-       System.out.println("Среднее колличество шагов "+(sumStep/(countCycle+1)));
+       System.out.println( "\n" +"всего шагов за месяц: "+sumStep);
+       System.out.println( "всего киллометров пройдено за месяц: " + converter.convertStepToKM(sumStep));
+       System.out.println( "всего Ккал сожжено за месяц: "+ converter.convertStepToColorie(sumStep));
+       System.out.println("Среднее колличество шагов: "+(sumStep/(countCycle+1)));
        System.out.println("Лучшая серия: максимальное количество подряд идущих дней, в течение которых количество шагов за день было выше целевого была:" + perfSeries);
        System.out.println("Ваша цель проходить в день "+ targetStep+" шагов");
 
